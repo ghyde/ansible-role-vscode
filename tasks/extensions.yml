@@ -1,0 +1,9 @@
+---
+- name: Get list of installed extensions
+  command: "code --list-extensions"
+  changed_when: False
+  register: installed_extensions
+- name: Install extensions
+  command: "code --install-extension {{ item }}"
+  loop: "{{ vs_code_extensions }}"
+  when: item not in installed_extensions.stdout
