@@ -13,6 +13,5 @@ galaxy_info:
     - 30
   galaxy_tags:
    - fedora
-   - terminal
-   - tilix
+   - vscode
 ...
